@@ -18,7 +18,7 @@ body {
 }
 
 .wrapper {
-    width: 500px;
+    width: 501px;
     height: 800px;
     border: 1px solid white;
     overflow-y: scroll;
