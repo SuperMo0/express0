@@ -20,6 +20,6 @@ app.post('/', (req, res) => {
     res.redirect('/');
 })
 
-app.listen(3000, 'localhost', () => {
-    console.log('server is listening on port', 3000);
+app.listen(process.end.PORT || 3000, () => {
+    console.log('server is listening);
 });
