@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: rgb(22, 2, 31);
+}
+
+.wrapper {
+    width: 500px;
+    height: 800px;
+    border: 1px solid white;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: purple white;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    background: linear-gradient(90deg, rgb(95, 48, 95), rgb(94, 17, 94));
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.message p:last-child {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.message p:nth-child(1),
+p:nth-child(2) {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.new {
+    margin-top: auto;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    padding: 0;
+    border: none;
+    outline: none;
+    height: 50px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    padding-inline: 5px;
+    width: 70%;
+    background: linear-gradient(90deg, rgb(95, 48, 95), rgb(94, 17, 94));
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.589);
+}
+
+
+button {
+    font-size: 2.5rem;
+    border-radius: 15px;
+    padding: 5px;
+    background: linear-gradient(90deg, rgb(95, 48, 95), rgb(94, 17, 94));
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover,
+input:hover {
+    transform: translateY(-2px);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>messanger</h1>
+    <div class="windows">
+        <div class="wrapper">
+            <% data.forEach(element=> { %>
+                <div class="message">
+                    <p>Name: <%= element.name %>
+                    </p>
+                    <p>Date: <%= element.date %>
+                    </p>
+                    <p>
+                        <%= element.message %>
+                    </p>
+                </div>
+                <% }) %>
+        </div>
+
+        <form class="new" method="post" action="/">
+            <input name="name" type="text" hidden>
+            <input name="message" type="text" placeholder="enter text here...">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
