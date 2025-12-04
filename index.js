@@ -3,7 +3,7 @@ const { log } = require('node:console');
 const app = express();
 const path = require('node:path');
 
-let db=${{ Postgres.DATABASE_URL }};
+
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 app.set("views", path.join(__dirname, "views"));
@@ -22,5 +22,4 @@ app.post('/', (req, res) => {
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('server is listening');
-    console.log(db);
 });
