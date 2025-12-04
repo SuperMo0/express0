@@ -10,14 +10,15 @@
 
 <body>
 
+
     <h1>messanger</h1>
     <div class="windows">
         <div class="wrapper">
             <% data.forEach(element=> { %>
                 <div class="message">
-                    <p>Name: <%= element.name %>
+                    <p>Name: <%= element.username %>
                     </p>
-                    <p>Date: <%= element.date %>
+                    <p>Date: <%= element.created %>
                     </p>
                     <p>
                         <%= element.message %>
@@ -27,13 +28,20 @@
         </div>
 
         <form class="new" method="post" action="/">
-            <input name="name" type="text" hidden>
+            <input name="name" id="name" type="text" hidden>
             <input name="message" type="text" placeholder="enter text here...">
             <button type="submit">Send</button>
         </form>
     </div>
-
-
+    <script async="false">
+        let name = localStorage.getItem('name');
+        if (!name) {
+            name = window.prompt('enter your name');
+        }
+        let input = document.getElementById('name');
+        localStorage.setItem('name', name);
+        input.value = name;
+    </script>
 
 
 </body>
